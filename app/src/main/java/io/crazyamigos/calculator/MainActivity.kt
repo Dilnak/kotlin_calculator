@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         var flag: Int = 0
     var count:Int=0
     var key:Int=0
-    var num:String=""
     fun delButtonClick(view: View) {
             displayTextView.text = ""
         res=0.0
@@ -27,10 +26,8 @@ class MainActivity : AppCompatActivity() {
 
 
         fun backButtonClick(view: View) {
-            num=displayTextView.text.toString()
-            num= (num.toInt()/10).toString()
+            displayTextView.text=displayTextView.text.substring(0,displayTextView.text.lastIndex)
 
-            displayTextView.text=num.toString()
         }
 
 
